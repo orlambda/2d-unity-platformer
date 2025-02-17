@@ -1,5 +1,6 @@
 - Basic platformer room
     - Create room boundary with collision
+    - Adjust camera
     - Add player with collision and rigidbody + gravity
     - Add sideways movement to player
     - Add platforms to allow sideways movement and falling
