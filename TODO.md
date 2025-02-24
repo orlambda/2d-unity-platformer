@@ -1,4 +1,6 @@
 - Basic platformer room
+    - Refactor Player Controller to use a single direction vector per update
+
     - Make sideways movement smooth
     - Make jumping correct
     - Fix collision at high speeds
