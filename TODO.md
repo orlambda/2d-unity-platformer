@@ -1,5 +1,4 @@
-- Priority
-    - Use kinematic rigidbody
+- Priority: kinematic
     - Detect collision
     - Correct for collision
     - Add gravity
