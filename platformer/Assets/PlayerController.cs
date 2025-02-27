@@ -1,3 +1,4 @@
+using UnityEditor.UI;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -18,16 +19,16 @@ public class PlayerController : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
-        
-        if (canWalk)
-        {
-            transform.Translate(Vector2.right * Time.deltaTime * walkSpeed * horizontalInput);
-        }
-        // Jumping currently relies on rigidbody physics to fall, otherwise would be flying
-        if (canJump && (verticalInput > 0))
-        {
-            transform.Translate(Vector2.up * Time.deltaTime * jumpSpeed * verticalInput);
-        }
 
+        Vector2 velocity = new Vector2(0, 0);
+        
+        if (canWalk) {
+            velocity += (Vector2.right * Time.deltaTime * walkSpeed * horizontalInput); }
+
+        // Jumping currently relies on rigidbody physics to fall, otherwise would be flying
+        if (canJump && (verticalInput > 0)) {
+            velocity += (Vector2.up * Time.deltaTime * jumpSpeed * verticalInput); }
+        
+        transform.Translate(velocity);
     }
 }
