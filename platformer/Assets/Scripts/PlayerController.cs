@@ -129,24 +129,24 @@ public class PlayerController : MonoBehaviour
         // Apply sideways movement
         if (canWalk)
         {
-            velocity += (Vector2.right * Time.deltaTime * walkSpeed * horizontalInput);
-            velocitySidewaysOnly += (Vector2.right * Time.deltaTime * walkSpeed * horizontalInput);
+            velocity += (Vector2.right * Time.fixedDeltaTime * walkSpeed * horizontalInput);
+            velocitySidewaysOnly += (Vector2.right * Time.fixedDeltaTime * walkSpeed * horizontalInput);
         }
         jumping = false;
         attemptingJump = false;
         // Apply upwards movement
         if (canJump && (verticalInput > 0))
         {
-            velocity += (Vector2.up * Time.deltaTime * jumpSpeed * verticalInput);
-            velocityUpwardsOnly += (Vector2.up * Time.deltaTime * jumpSpeed * verticalInput);
+            velocity += (Vector2.up * Time.fixedDeltaTime * jumpSpeed * verticalInput);
+            velocityUpwardsOnly += (Vector2.up * Time.fixedDeltaTime * jumpSpeed * verticalInput);
             jumping = true;
             attemptingJump = true;
         }
         // Apply gravity
         if (!checkIfGrounded())
         {
-            velocity += (Vector2.down * Time.deltaTime * gravityFactor);
-            velocityGravityOnly += (Vector2.down * Time.deltaTime * gravityFactor);
+            velocity += (Vector2.down * Time.fixedDeltaTime * gravityFactor);
+            velocityGravityOnly += (Vector2.down * Time.fixedDeltaTime * gravityFactor);
         }
         
         // Translate collisionTestBody
