@@ -1,7 +1,18 @@
+- Raycasting
+    - Add grounded check
+        - Boxcast? 2D so collider2D.raycast?
+    - Check for collision
+        - Boxcast? 2D so collider2D.raycast?
+- Only add gravity if not grounded
+
+- Jumping
+    - Only start jump if grounded
+    - End fall if grounded
+
+
 - Priority: kinematic
     - Detect collision
     - Correct for collision
-    - Add gravity
     - Detect if standing / can jump (if collision when moving down for gravity)
         - Note: do I need to translate player more than once now?
     - Change jump be single impulse followed by falling
