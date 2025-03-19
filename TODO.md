@@ -1,31 +1,26 @@
+- This week
+    - Update git
+    - New branch for moving to a new project
+    - New project in new folder so can have same project name
+    - Move over to new project
+    - Delete old project and replace
+- Unity timeline
+    - Install
+    - Check if mentioned in gibson bond / sams teach yourself / catlike coding / discord servers
+
+- making more of a 'Game'
+    - add another room
+    - add music
+
 - Raycasting
     - Add grounded check
         - Boxcast? 2D so collider2D.raycast?
     - Check for collision
         - Boxcast? 2D so collider2D.raycast?
-- Only add gravity if not grounded
 
-- Jumping
-    - Only start jump if grounded
-    - End fall if grounded
-
-
-- Priority: kinematic
-    - Detect collision
-    - Correct for collision
-    - Detect if standing / can jump (if collision when moving down for gravity)
-        - Note: do I need to translate player more than once now?
-    - Change jump be single impulse followed by falling
-        - Add bool jumping: true for jumpTime?
-        - What stops jumping?
-            - Time limit
-            - Any collision, or specific collision?
-            - Height reached?
 
 - Basic platformer room
     - Check z transorm / layer convention for sprites
-    - Make sideways movement smooth
-    - Fix collision at high speeds
     - Make the portal entrance trigger visible only in the editor
     - Add line between entrance and exit in editor when portal is selected (gizmos?)
     - Add looping background music
